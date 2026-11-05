@@ -10,3 +10,5 @@ opt.signcolumn = "yes"
 opt.updatetime = 250
 vim.o.mouse = ""
 vim.o.clipboard = "unnamedplus"
+
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

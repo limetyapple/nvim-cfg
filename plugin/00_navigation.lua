@@ -5,7 +5,14 @@ require("core.plugin").plugin({
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
-			require("fzf-lua").setup()
+			require("fzf-lua").setup({
+				winopts = {
+					preview = {
+						layout = "vertical", -- 设置为垂直布局
+						vertical = "down:50%", -- 预览窗口在下方，占据50%高度
+					},
+				},
+			})
 			require("fzf-lua").register_ui_select()
 		end,
 		keys = {
@@ -18,6 +25,10 @@ require("core.plugin").plugin({
 			{ "<leader>fz", "<cmd>FzfLua zoxide<cr>", { desc = "fzf zoxide picker" } },
 			{ "<leader>fo", "<cmd>FzfLua oldfiles<cr>", { desc = "fzf oldfiles picker" } },
 		},
+	},
+	{
+		repo = "phanen/fzf-lua-extra",
+		deps = { "ibhagwan/fzf-lua" }, -- fzf-lua 是必须的
 	},
 	{
 		repo = "stevearc/oil.nvim",

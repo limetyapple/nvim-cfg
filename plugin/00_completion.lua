@@ -15,7 +15,9 @@ require("core.plugin").plugin({
 		"saghen/blink.lib",
 	},
 	config = function()
-		require("blink.cmp").setup({
+		local cmp = require("blink.cmp")
+		cmp.build():pwait()
+		cmp.setup({
 			keymap = { preset = "default" },
 			completion = { documentation = { auto_show = false } },
 			sources = {
