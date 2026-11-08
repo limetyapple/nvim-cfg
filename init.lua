@@ -1,12 +1,5 @@
-require("core.options")
-require("core.keymaps")
-require("core.autocmds")
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
+require("config.lazy")
 
--- vim.api.nvim_create_autocmd("VimEnter", {
--- 	once = true,
--- 	callback = function()
--- 			vim.schedule(function()
--- 		require("core.plugin").flush()
--- 		end)
--- 	end,
--- })

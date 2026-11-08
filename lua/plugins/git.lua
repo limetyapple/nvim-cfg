@@ -1,12 +1,12 @@
-require("core.plugin").plugin({
+return {
 	{
-		repo = "kdheepak/lazygit.nvim",
-		deps = {
+		"kdheepak/lazygit.nvim",
+		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		config = function() end,
+		opts = {},
 		keys = {
 			{ "<leader>g", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" } },
 		},
 	},
-})
+}

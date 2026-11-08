@@ -1,16 +1,13 @@
-require("core.plugin").plugin({
+return {
 	{
-		repo = "akinsho/toggleterm.nvim",
-		deps = {},
-		config = function()
-			require("toggleterm").setup({
-				open_mapping = [[<C-\>]],
-				direction = "float",
-				size = 20,
-				shade_terminals = false,
-				start_in_insert = true,
-			})
-		end,
+		"akinsho/toggleterm.nvim",
+		opts = {
+			open_mapping = [[<C-\>]],
+			direction = "float",
+			size = 20,
+			shade_terminals = false,
+			start_in_insert = true,
+		},
 		keys = {
 			{ "<C-\\>", "<cmd>ToggleTerm<cr>", mode = { "n" }, desc = "Toggle Terminal" },
 			{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", mode = { "n" }, desc = "Float Terminal" },
@@ -29,4 +26,4 @@ require("core.plugin").plugin({
 			{ "<Esc><Esc>", [[<C-\><C-n>]], mode = { "t" }, { desc = "Exit terminal mode" } },
 		},
 	},
-})
+}

@@ -12,3 +12,4 @@ vim.o.mouse = ""
 vim.o.clipboard = "unnamedplus"
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.g.have_nerd_font = true

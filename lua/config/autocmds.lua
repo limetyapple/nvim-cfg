@@ -19,3 +19,11 @@ vim.api.nvim_create_autocmd("BufReadPre", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "lua", "python", "javascript", "c", "cpp", "rust" },
+  callback = function(args)
+    -- 确保对应解析器已安装
+    vim.treesitter.start(args.buf)
+  end,
+})
